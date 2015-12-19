@@ -1,0 +1,14 @@
+PODS:
+  - AppsaholicSDK (3.0.2)
+
+DEPENDENCIES:
+  - AppsaholicSDK (from `AppsaholicUniversalSDK/`)
+
+EXTERNAL SOURCES:
+  AppsaholicSDK:
+    :path: AppsaholicUniversalSDK/
+
+SPEC CHECKSUMS:
+  AppsaholicSDK: e839efab50a45ea87e64f7c0df1854b9d8e9a93e
+
+COCOAPODS: 0.38.2

@@ -1,0 +1,1 @@
+../../../../../AppsaholicUniversalSDK/AdvertisingPartners/AerServSDK.framework/Headers/ASAdView.h

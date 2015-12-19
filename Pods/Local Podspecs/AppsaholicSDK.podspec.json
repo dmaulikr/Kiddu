@@ -1,0 +1,45 @@
+{
+  "name": "AppsaholicSDK",
+  "version": "3.0.2",
+  "summary": "Superchange your app with the #1 Mobile Loyalty Program",
+  "description": "A longer description of AppsaholicSDK in Markdown format.\n\n* Think: Why did you write this? What is the focus? What does it do?\n* CocoaPods will be using this to generate tags, and improve search results.\n* Try to keep it short, snappy and to the point.\n* Finally, don't worry about the indent, CocoaPods strips it!",
+  "homepage": "http://EXAMPLE/AppsaholicSDK",
+  "license": "MIT (example)",
+  "authors": {
+    "Abhijeet Upadhyay": "abhijeet@perk.com"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "source_files": [
+    "AppsaholicFramework/Headers/*.h",
+    "*.m"
+  ],
+  "preserve_paths": "AppsaholicUniversalSDK/AppsaholicFramework/Lib/libAppsaholicSDK-3.0.2.a",
+  "xcconfig": {
+    "LD_RUNPATH_SEARCH_PATHS": "@loader_path/../Frameworks"
+  },
+  "exclude_files": "AppsaholicUniversalSDK/Exclude",
+  "ios": {
+    "vendored_libraries": "AppsaholicFramework/Lib/libAppsaholicSDK-3.0.2.a",
+    "vendored_frameworks": [
+      "AdvertisingPartners/AerServSDK.framework",
+      "AdvertisingPartners/FBAudienceNetwork.framework",
+      "AdvertisingPartners/pollfish.framework"
+    ]
+  },
+  "public_header_files": "AppsaholicFramework/Headers/*.h",
+  "resources": "AppsaholicFramework/AppsaholicResources/*.*",
+  "frameworks": [
+    "StoreKit",
+    "AdSupport",
+    "CoreMotion",
+    "CoreTelephony",
+    "CoreGraphics",
+    "QuartzCore"
+  ],
+  "libraries": [
+    "iconv",
+    "xml2"
+  ]
+}

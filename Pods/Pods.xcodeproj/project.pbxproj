@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27E9309883D645DA1DD521C9B4784A65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7101D88C0DD31BFF60B44E6784476AC0 /* Foundation.framework */; };
+		EC9236466EEAE214639304F6CCA58FB0 /* Pods-Kiddu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A1420A3C171EC5442E2653A5B76500 /* Pods-Kiddu-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		091807FBC7ECCBE0FFAF5BFC6327F75F /* Perk_Point_10.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = Perk_Point_10.png; sourceTree = "<group>"; };
+		09B8E47716EAF3CD241F9FEC812B913E /* Pods-Kiddu-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Kiddu-resources.sh"; sourceTree = "<group>"; };
+		0A37FACD328070DAAE800C1FF7A96CD1 /* Perk_Point_1.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = Perk_Point_1.png; sourceTree = "<group>"; };
+		167368AD36D538E4ACC794BA85C5A509 /* Perk_Point_3.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = Perk_Point_3.png; sourceTree = "<group>"; };
+		1F42E6E92CCBAC5B84CA1F4507C85431 /* Perk_Point_6.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = Perk_Point_6.png; sourceTree = "<group>"; };
+		286A2974C9572C3934565016C7F93704 /* AppsaholicAds.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AppsaholicAds.h; sourceTree = "<group>"; };
+		2BA743489FCC53829281C395695974F2 /* Pods-Kiddu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kiddu.release.xcconfig"; sourceTree = "<group>"; };
+		31B39B7E5220B5D08E24865BA5925A71 /* Pods-Kiddu-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Kiddu-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3A03515899C54240181D4BB6628283F2 /* icon_info_notification.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = icon_info_notification.png; sourceTree = "<group>"; };
+		3BB8CBDFEB94D31AC8C773FB879CE1BC /* Perk_Point_7.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = Perk_Point_7.png; sourceTree = "<group>"; };
+		4991F28DF7544EE51E4D0C62CE5885C7 /* perk_star.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = perk_star.png; sourceTree = "<group>"; };
+		505378E69A28AAEAD30F308111E9D531 /* libAppsaholicSDK-3.0.2.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = "libAppsaholicSDK-3.0.2.a"; path = "AppsaholicFramework/Lib/libAppsaholicSDK-3.0.2.a"; sourceTree = "<group>"; };
+		52665716728B22A55D60A0749B0482E8 /* Pods-Kiddu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kiddu.debug.xcconfig"; sourceTree = "<group>"; };
+		5760AE6CB17ED0717E14132F5454162E /* Perk_Point_2.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = Perk_Point_2.png; sourceTree = "<group>"; };
+		61B3BF151815423C0F24B62DCDC3F204 /* info_circle.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = info_circle.png; sourceTree = "<group>"; };
+		667447E4DA58E60A389DA31E5746D645 /* logo_perk.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = logo_perk.png; sourceTree = "<group>"; };
+		6732A2C8D5EA4F818B1157607AC877B9 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBAudienceNetwork.framework; path = AdvertisingPartners/FBAudienceNetwork.framework; sourceTree = "<group>"; };
+		6D265B03E705B6C17189161B3E4AF64C /* Perk_Point_4.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = Perk_Point_4.png; sourceTree = "<group>"; };
+		7101D88C0DD31BFF60B44E6784476AC0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7A65A4C68B07CA9AED2BACFF9341C263 /* Perk_Point_9.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = Perk_Point_9.png; sourceTree = "<group>"; };
+		7E3F542635FE9EDBD99D72A497213C78 /* Perk_Point_8.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = Perk_Point_8.png; sourceTree = "<group>"; };
+		7E7F63603902CB040C88EFDE8BF619F9 /* icon_faq_notification.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = icon_faq_notification.png; sourceTree = "<group>"; };
+		84E07268EFE5C8270A19BE44F112A7C0 /* pollfish.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = pollfish.framework; path = AdvertisingPartners/pollfish.framework; sourceTree = "<group>"; };
+		857E62DCC5DF02C621425F8CF0FCADE0 /* loginToPerk.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = loginToPerk.png; sourceTree = "<group>"; };
+		8A7519CBAF6237B6BA6D9F336BA024A3 /* point_notification.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = point_notification.png; sourceTree = "<group>"; };
+		8AAEF29FF9F72BF1788DC4F008D4F641 /* earn_more_btn_1a2.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = earn_more_btn_1a2.png; sourceTree = "<group>"; };
+		96A1420A3C171EC5442E2653A5B76500 /* Pods-Kiddu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Kiddu-dummy.m"; sourceTree = "<group>"; };
+		9AE4DEFADFF9054C53D077CEA4253967 /* AppsaholicSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AppsaholicSDK.h; sourceTree = "<group>"; };
+		9CE0F85DC3351B0441E858B8297477D4 /* arrow.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		A33E214B5A145FBCF75D4D166E21660E /* logo_notification.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = logo_notification.png; sourceTree = "<group>"; };
+		A9699EACCA7E622B999E34773FFDCE60 /* account.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = account.png; sourceTree = "<group>"; };
+		AC0A868FEBC5AA6864E08FA28B2C4C4F /* back.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		B3C24BE655427F45B0AE8B2A501F5671 /* icon_refresh.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = icon_refresh.png; sourceTree = "<group>"; };
+		B403DF10D679E97A61F58F4EA3D8D6DF /* Pods-Kiddu-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Kiddu-acknowledgements.plist"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CE8CADA4AEDAF298E4A9EE35990452CB /* Perk_Point_5.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = Perk_Point_5.png; sourceTree = "<group>"; };
+		D4C64EC1D3C6B1B27F787F5237488FC2 /* close_button.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = close_button.png; sourceTree = "<group>"; };
+		D6E8B1B02E716B01B2F93EE0A9503730 /* claim_btn_notification1a.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = claim_btn_notification1a.png; sourceTree = "<group>"; };
+		DF075977BDDF8AEBCF352777A2989A6C /* TempUnavailable.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = TempUnavailable.png; sourceTree = "<group>"; };
+		F8E4C033B0E4460138CD31A529368ADC /* exclaimation.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = exclaimation.png; sourceTree = "<group>"; };
+		FA0E61219315772243BF8A465BE565D7 /* AerServSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AerServSDK.framework; path = AdvertisingPartners/AerServSDK.framework; sourceTree = "<group>"; };
+		FDCB9712F63B148DBB14BEBB2A557D25 /* libPods-Kiddu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Kiddu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		210D51597FD7E424C2F86E287C9CDEE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27E9309883D645DA1DD521C9B4784A65 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		122E98FA52247BC8483BEAF09548A486 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA0E61219315772243BF8A465BE565D7 /* AerServSDK.framework */,
+				6732A2C8D5EA4F818B1157607AC877B9 /* FBAudienceNetwork.framework */,
+				505378E69A28AAEAD30F308111E9D531 /* libAppsaholicSDK-3.0.2.a */,
+				84E07268EFE5C8270A19BE44F112A7C0 /* pollfish.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		53F661C0CA7190D2CF05023FB33D61E4 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				7101D88C0DD31BFF60B44E6784476AC0 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5436A3488109042B8DA65E3C82A31007 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7137AF1A5A04133D0998F868FFC6E7F1 /* Pods-Kiddu */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7137AF1A5A04133D0998F868FFC6E7F1 /* Pods-Kiddu */ = {
+			isa = PBXGroup;
+			children = (
+				31B39B7E5220B5D08E24865BA5925A71 /* Pods-Kiddu-acknowledgements.markdown */,
+				B403DF10D679E97A61F58F4EA3D8D6DF /* Pods-Kiddu-acknowledgements.plist */,
+				96A1420A3C171EC5442E2653A5B76500 /* Pods-Kiddu-dummy.m */,
+				09B8E47716EAF3CD241F9FEC812B913E /* Pods-Kiddu-resources.sh */,
+				52665716728B22A55D60A0749B0482E8 /* Pods-Kiddu.debug.xcconfig */,
+				2BA743489FCC53829281C395695974F2 /* Pods-Kiddu.release.xcconfig */,
+			);
+			name = "Pods-Kiddu";
+			path = "Target Support Files/Pods-Kiddu";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				EB3F8A4C338819BBB97A87743BCC8825 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
+				5436A3488109042B8DA65E3C82A31007 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		95342084AD26E00CFEF6E7DEC3A4CB04 /* AppsaholicFramework */ = {
+			isa = PBXGroup;
+			children = (
+				BC39665209AAEFB0B8B987619EFD12EE /* AppsaholicResources */,
+			);
+			path = AppsaholicFramework;
+			sourceTree = "<group>";
+		};
+		A06090B04254BC08F737D38C2124D6E2 /* AppsaholicSDK */ = {
+			isa = PBXGroup;
+			children = (
+				CE5E079096BC4D10A89766FA54131523 /* AppsaholicFramework */,
+				122E98FA52247BC8483BEAF09548A486 /* Frameworks */,
+				C2ABBC61C903C441E85F2682F7FEB77B /* Resources */,
+			);
+			name = AppsaholicSDK;
+			path = ../AppsaholicUniversalSDK;
+			sourceTree = "<group>";
+		};
+		BC39665209AAEFB0B8B987619EFD12EE /* AppsaholicResources */ = {
+			isa = PBXGroup;
+			children = (
+				0A37FACD328070DAAE800C1FF7A96CD1 /* Perk_Point_1.png */,
+				091807FBC7ECCBE0FFAF5BFC6327F75F /* Perk_Point_10.png */,
+				5760AE6CB17ED0717E14132F5454162E /* Perk_Point_2.png */,
+				167368AD36D538E4ACC794BA85C5A509 /* Perk_Point_3.png */,
+				6D265B03E705B6C17189161B3E4AF64C /* Perk_Point_4.png */,
+				CE8CADA4AEDAF298E4A9EE35990452CB /* Perk_Point_5.png */,
+				1F42E6E92CCBAC5B84CA1F4507C85431 /* Perk_Point_6.png */,
+				3BB8CBDFEB94D31AC8C773FB879CE1BC /* Perk_Point_7.png */,
+				7E3F542635FE9EDBD99D72A497213C78 /* Perk_Point_8.png */,
+				7A65A4C68B07CA9AED2BACFF9341C263 /* Perk_Point_9.png */,
+				DF075977BDDF8AEBCF352777A2989A6C /* TempUnavailable.png */,
+				A9699EACCA7E622B999E34773FFDCE60 /* account.png */,
+				9CE0F85DC3351B0441E858B8297477D4 /* arrow.png */,
+				AC0A868FEBC5AA6864E08FA28B2C4C4F /* back.png */,
+				D6E8B1B02E716B01B2F93EE0A9503730 /* claim_btn_notification1a.png */,
+				D4C64EC1D3C6B1B27F787F5237488FC2 /* close_button.png */,
+				8AAEF29FF9F72BF1788DC4F008D4F641 /* earn_more_btn_1a2.png */,
+				F8E4C033B0E4460138CD31A529368ADC /* exclaimation.png */,
+				7E7F63603902CB040C88EFDE8BF619F9 /* icon_faq_notification.png */,
+				3A03515899C54240181D4BB6628283F2 /* icon_info_notification.png */,
+				B3C24BE655427F45B0AE8B2A501F5671 /* icon_refresh.png */,
+				61B3BF151815423C0F24B62DCDC3F204 /* info_circle.png */,
+				857E62DCC5DF02C621425F8CF0FCADE0 /* loginToPerk.png */,
+				A33E214B5A145FBCF75D4D166E21660E /* logo_notification.png */,
+				667447E4DA58E60A389DA31E5746D645 /* logo_perk.png */,
+				4991F28DF7544EE51E4D0C62CE5885C7 /* perk_star.png */,
+				8A7519CBAF6237B6BA6D9F336BA024A3 /* point_notification.png */,
+			);
+			path = AppsaholicResources;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53F661C0CA7190D2CF05023FB33D61E4 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C2ABBC61C903C441E85F2682F7FEB77B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				95342084AD26E00CFEF6E7DEC3A4CB04 /* AppsaholicFramework */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		CC6CBFA6F963347552912C2F99A0D986 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				286A2974C9572C3934565016C7F93704 /* AppsaholicAds.h */,
+				9AE4DEFADFF9054C53D077CEA4253967 /* AppsaholicSDK.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FDCB9712F63B148DBB14BEBB2A557D25 /* libPods-Kiddu.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE5E079096BC4D10A89766FA54131523 /* AppsaholicFramework */ = {
+			isa = PBXGroup;
+			children = (
+				CC6CBFA6F963347552912C2F99A0D986 /* Headers */,
+			);
+			path = AppsaholicFramework;
+			sourceTree = "<group>";
+		};
+		EB3F8A4C338819BBB97A87743BCC8825 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A06090B04254BC08F737D38C2124D6E2 /* AppsaholicSDK */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ABBB0F3AE6EAB28B0AB1D30012F70A14 /* Pods-Kiddu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E59165F5D94C1D06BB4FDBD224E1643 /* Build configuration list for PBXNativeTarget "Pods-Kiddu" */;
+			buildPhases = (
+				A6102606BAB6B855DBB7D9D03A9C0F3F /* Sources */,
+				210D51597FD7E424C2F86E287C9CDEE9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Kiddu";
+			productName = "Pods-Kiddu";
+			productReference = FDCB9712F63B148DBB14BEBB2A557D25 /* libPods-Kiddu.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = CCA510CFBEA2D207524CDA0D73C3B561 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ABBB0F3AE6EAB28B0AB1D30012F70A14 /* Pods-Kiddu */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A6102606BAB6B855DBB7D9D03A9C0F3F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC9236466EEAE214639304F6CCA58FB0 /* Pods-Kiddu-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1C28BF7437A1654BF99FD679751806F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52665716728B22A55D60A0749B0482E8 /* Pods-Kiddu.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		74857149DC1E0D599B8A01A78349A926 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9815C2B9234834764BE0A038B108BBB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BA743489FCC53829281C395695974F2 /* Pods-Kiddu.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */,
+				74857149DC1E0D599B8A01A78349A926 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E59165F5D94C1D06BB4FDBD224E1643 /* Build configuration list for PBXNativeTarget "Pods-Kiddu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C28BF7437A1654BF99FD679751806F9 /* Debug */,
+				9815C2B9234834764BE0A038B108BBB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

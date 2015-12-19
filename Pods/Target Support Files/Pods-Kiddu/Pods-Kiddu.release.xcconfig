@@ -1,0 +1,8 @@
+FRAMEWORK_SEARCH_PATHS = "$(PODS_ROOT)/../AppsaholicUniversalSDK/AdvertisingPartners" "$(PODS_ROOT)/../AppsaholicUniversalSDK/AdvertisingPartners" "$(PODS_ROOT)/../AppsaholicUniversalSDK/AdvertisingPartners"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AppsaholicSDK" "${PODS_ROOT}/Headers/Public/AppsaholicSDK/AerServSDK" "${PODS_ROOT}/Headers/Public/AppsaholicSDK/FBAudienceNetwork" "${PODS_ROOT}/Headers/Public/AppsaholicSDK/pollfish"
+LD_RUNPATH_SEARCH_PATHS = @loader_path/../Frameworks
+LIBRARY_SEARCH_PATHS = "$(PODS_ROOT)/../AppsaholicUniversalSDK/AppsaholicFramework/Lib"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AppsaholicSDK" -isystem "${PODS_ROOT}/Headers/Public/AppsaholicSDK/AerServSDK" -isystem "${PODS_ROOT}/Headers/Public/AppsaholicSDK/FBAudienceNetwork" -isystem "${PODS_ROOT}/Headers/Public/AppsaholicSDK/pollfish"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"AppsaholicSDK-3.0.2" -l"iconv" -l"xml2" -framework "AdSupport" -framework "AerServSDK" -framework "CoreGraphics" -framework "CoreMotion" -framework "CoreTelephony" -framework "FBAudienceNetwork" -framework "QuartzCore" -framework "StoreKit" -framework "pollfish"
+PODS_ROOT = ${SRCROOT}/Pods
