@@ -9,6 +9,39 @@
 import Foundation
 import UIKit
 
+extension Array
+{
+    //MARK: Remove objects from the Array
+    
+    mutating func removeObjects<T : Equatable>(array : [T] ) {
+        for object in array {
+            for index in 0..<self.count {
+                if self[index] as? T == object {
+                    self.removeAtIndex(index)
+                }
+            }
+        }
+    }
+    
+    mutating func remove( test: (Element) -> Bool) -> Int? {
+        for i in 0..<self.count {
+            if test(self[i]) {
+                self.removeAtIndex(i)
+            }
+        }
+        return nil
+    }
+    
+    mutating func remove <U: Equatable> (object: U) {
+        for i in (self.count-1).stride(through: 0, by: -1) {
+            if let element = self[i] as? U {
+                if element == object {
+                    self.removeAtIndex(i)
+                }
+            }
+        }
+    }
+}
 
 extension String {
     

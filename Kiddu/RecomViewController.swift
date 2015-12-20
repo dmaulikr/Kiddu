@@ -11,6 +11,17 @@ import UIKit
 import Parse
 import Bolts
 
+
+extension RecomViewController : UserSignOutClickedProtocol
+{
+    func userLoggingoutClicked() {
+        
+        print("comes here ??")
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+}
+
+
 extension RecomViewController : UITableViewDataSource {
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int  {
@@ -36,22 +47,22 @@ extension RecomViewController : UITableViewDataSource {
         cell.followButton.addTarget(self, action: Selector("followButtonClicked:event:"), forControlEvents: UIControlEvents.TouchUpInside)
         cell.followButton.userInteractionEnabled = true
         
-        if self.currentlyFollowing.contains(indexPath.row)
+        if cell.followButton.tag == 99
         {
-            cell.followButton.backgroundColor = UIColor(red: (111 / 255 ), green: ( 113 / 255 ), blue: ( 121 / 255), alpha: 1.0)
+            cell.followButton.backgroundColor = UIColor(red: (35 / 255 ), green: ( 189 / 255 ), blue: ( 121 / 255), alpha: 1.0)
             cell.followButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         }
         else
         {
             cell.followButton.backgroundColor = UIColor.clearColor()
-            cell.followButton.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
+            cell.followButton.setTitleColor(UIColor(red: (35 / 255 ), green: ( 189 / 255 ), blue: ( 121 / 255), alpha: 1.0), forState: UIControlState.Normal)
         }
         
         // Thumbnail Image
         
         cell.separatorInset = UIEdgeInsetsZero
         
-        cell.userThumbnail.layer.borderColor = UIColor.whiteColor().CGColor
+        cell.userThumbnail.layer.borderColor = UIColor(red: (35 / 255 ), green: ( 189 / 255 ), blue: ( 121 / 255), alpha: 1.0).CGColor
         cell.userThumbnail.layer.borderWidth = 2
         cell.userThumbnail.clipsToBounds = true
         cell.userThumbnail.layer.cornerRadius = cell.userThumbnail.frame.size.width / 2
@@ -64,16 +75,13 @@ extension RecomViewController : UITableViewDataSource {
         
         print("USER NAME : \(self.tableViewDataSource[indexPath.row].user_Name) || IMAGE : \(self.tableViewDataSource[indexPath.row].thumbImage)")
         
-        
         return cell
     }
-    
 }
 
 extension RecomViewController : UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
         
     }
 }
@@ -103,12 +111,17 @@ class RecomViewController: UIViewController {
     let parseHelperObject : ParseHelper = ParseHelper()
     let parseFollowersHelperObject : ParseFollowersHelper = ParseFollowersHelper()
     
+    var currentlySelectedUsers : [String] = []
+    
     let utilitiesObject : Utilities = Utilities()
     let parseSignUpHelperObject : ParseSignUpHelper = ParseSignUpHelper()
     
-    var currentlyFollowing : [Int] = []
-    var flag_Already_Following : Bool = false
+    //MARK: Appsaholic
     
+    let appsaholicSDKInstance : AppsaholicSDK = AppsaholicSDK.sharedManager() as! AppsaholicSDK
+
+    //MARK: viewWillAppear
+
     override func viewWillAppear(animated: Bool) {
         
         self.parseQueryHelperObject.getUpdatedQuestionsForTheUser { success, objects in
@@ -137,11 +150,24 @@ class RecomViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.skipFollowingButton.titleLabel?.font = UIFont(name: "FontAwesome", size: 30)
-        self.skipFollowingButton.titleLabel?.textAlignment = NSTextAlignment.Center
-        self.skipFollowingButton.setTitle("\u{f18e}", forState: UIControlState.Normal)
-        self.skipFollowingButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        // Add PERK Point Here
         
+        if let controller = UIApplication.sharedApplication().keyWindow?.rootViewController
+        {
+            self.appsaholicSDKInstance.appsaholic_rootViewController = controller
+            
+            self.appsaholicSDKInstance.trackEvent(KEYS.DUMMY_EVENT_KEY.rawValue, withSubID: NSUUID().UUIDString, notificationType: false, withController: self, withSuccess: { success, value, number in
+                
+                print("Success : \(success)")
+                
+            })
+        }
+        
+//        self.skipFollowingButton.titleLabel?.font = UIFont(name: "FontAwesome", size: 30)
+//        self.skipFollowingButton.titleLabel?.textAlignment = NSTextAlignment.Center
+//        self.skipFollowingButton.setTitle("\u{f0a4}", forState: UIControlState.Normal)
+//        self.skipFollowingButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+//        
         self.doneButotn.titleLabel?.font = UIFont(name: "FontAwesome", size: 30)
         self.doneButotn.titleLabel?.textAlignment = NSTextAlignment.Center
         self.doneButotn.setTitle("\u{f14a}", forState: UIControlState.Normal)
@@ -169,12 +195,19 @@ class RecomViewController: UIViewController {
         for object in self.tableViewDataSource
         {
             let objectID = object.userObjectID
-            allUsers.append(objectID)
+
+            if self.currentlySelectedUsers.contains(objectID)
+            {
+            }
+            else
+            {
+                allUsers.append(objectID)
+            }
         }
         
-        if let user = PFUser.currentUser()
+        if let user = PFUser.currentUser(), userObjectId = user.objectId
         {
-            self.parseFollowersHelperObject.updateUserFollowersInBackground(user, following: allUsers)
+            self.parseFollowersHelperObject.updateUserFollowersInBackground(userObjectId, following: allUsers)
             
             // Move to Home page
             
@@ -207,6 +240,7 @@ class RecomViewController: UIViewController {
     func moveToHomePage()
     {
         let answerVC : HomeViewController = utilitiesObject.getViewController("HomeView", mainStoryBoardName: "Main") as! HomeViewController
+        answerVC.delegate = self
         self.presentViewController(answerVC, animated: true, completion: nil)
     }
     
@@ -216,23 +250,31 @@ class RecomViewController: UIViewController {
     {
         if let touch = event.touchesForView(sender)?.first, indexPath = self.tableView.indexPathForRowAtPoint(touch.locationInView(self.tableView)) {
             
-            if let user = PFUser.currentUser()
+            let objectID = self.tableViewDataSource[indexPath.row].userObjectID
+
+            if let user = PFUser.currentUser(), userObjectId = user.objectId
             {
-                if self.flag_Already_Following
+                if sender.tag == 99
                 {
                     sender.setTitle("+ Follow", forState: UIControlState.Normal)
-                    self.flag_Already_Following = false
+                    sender.tag = 90
+                    
+                    // Unselected a User
+                    
+                    self.currentlySelectedUsers.remove(objectID)
                 }
                 else
                 {
                     sender.setTitle("Following", forState: UIControlState.Normal)
                     
-                    let objectID = self.tableViewDataSource[indexPath.row].userObjectID
-                    self.parseFollowersHelperObject.updateUserFollowersInBackground(user, following: [objectID])
-                    self.currentlyFollowing.append(indexPath.row)
+                    self.parseFollowersHelperObject.updateUserFollowersInBackground(userObjectId, following: [objectID])
                     self.tableView.reloadData()
                     
-                    self.flag_Already_Following = true
+                    sender.tag = 99
+                    
+                    // Selected A User
+                    
+                    self.currentlySelectedUsers.append(objectID)
                 }
             }
         }

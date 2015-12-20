@@ -47,6 +47,11 @@ extension NewQuestionViewController : UITextFieldDelegate {
     }
 }
 
+protocol NewQuestionAskedProtocol
+{
+    func newQuestionSuccessfullyAsked()
+}
+
 
 class NewQuestionViewController: UIViewController {
     
@@ -58,6 +63,7 @@ class NewQuestionViewController: UIViewController {
     
     //MARK: Local Variables
     
+    var delegate : NewQuestionAskedProtocol!
     let parseQuestionsQuesryHelper : ParseQuestionsHelper = ParseQuestionsHelper()
     
     //MARK: viewDidLoad
@@ -100,6 +106,7 @@ class NewQuestionViewController: UIViewController {
                 {
                     dispatch_async(dispatch_get_main_queue(), {
                         
+                        self.delegate.newQuestionSuccessfullyAsked()
                         self.submitQuestionButton.setTitle("Submitted :)", forState: UIControlState.Normal)
                         self.dismissViewControllerAnimated(true, completion: nil)
                     })

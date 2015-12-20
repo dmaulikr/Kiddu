@@ -17,6 +17,7 @@ enum USER_SIGNUP_AlertMessages : String
     case ACCOUNT_ALREADY_LINKED = "This account is already linked. Please check your details"
     case WELCOME = "Welcome to Kiddu"
     case NO_UUID = "Could not get the device vendor details"
-
+    case NO_VALID_DATA_SIGNUP = "Please enter the name, username and password properly"
+    case NO_VALID_DATA_LOGIN = "Please enter the username and password properly"
 
 }

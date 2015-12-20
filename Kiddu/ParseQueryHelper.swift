@@ -17,9 +17,9 @@ class ParseQueryHelper {
     
     func getUpdatedQuestionsForTheUser(completion : (success : Bool, objects : [RecommendedTableViewDatSource]) -> ())
     {
-        if let query : PFQuery = PFUser.query()
+        if let query : PFQuery = PFUser.query(), user = PFUser.currentUser(), currentUserName = user.objectForKey("username") as? String
         {
-            query.whereKey("username", containedIn: ["aalvinvs@gmail.com","alvin@karky.in", "stackalvin@gmail.com", "ceoowr@gmail.com","comeon@gmail.com"])
+            query.whereKey("username", notEqualTo: currentUserName)
             
             query.findObjectsInBackgroundWithBlock { objects, error in
                 

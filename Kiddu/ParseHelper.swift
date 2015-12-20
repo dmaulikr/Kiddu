@@ -27,6 +27,10 @@ class ParseHelper {
         
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
+        
+//        Bundle Identifier : com.ChamathaLabs.Kiddu
+//        Application Key : DtXjkqiGfz8SG9fjM3b03IPqVFTpVQZf8syaTYXe
+//        Client Key : mguTESY7u7c1iPHYe4SKPhzrMl1aIRzOfww28jvy
     }
     
     func refreshTheUser()
@@ -42,4 +46,25 @@ class ParseHelper {
         }
     }
     
+    func currentUserDetails(completion : (user : PFUser, objectId : String, name : String, userName : String, email : String) -> ())
+    {
+        if let user = PFUser.currentUser(), objectId = user["uuid"] as? String, name = user.username, userName = user["username"] as? String, email = user.email {
+            
+            completion(user: user, objectId: objectId, name: name, userName: userName, email : email)
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

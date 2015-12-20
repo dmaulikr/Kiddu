@@ -12,6 +12,16 @@ import Parse
 import Bolts
 
 
+enum KEYS : String
+{
+    case DUMMY_API_KEY = "daee393f1b55f99f410c17259172fef9db7b2480"
+    case DUMMY_EVENT_KEY = "102baba4474a87b8075b65e8aae2473ca510b3b4"
+    
+    case ORIGINAL_API_KEY = "a"
+    case ORIGINAL_EVENT_KEY = "s"
+}
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -32,6 +42,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         catch {
             
+        }
+        
+        let appsaholicSDKInstance : AppsaholicSDK = AppsaholicSDK.sharedManager() as! AppsaholicSDK
+
+        appsaholicSDKInstance.startSession(KEYS.DUMMY_API_KEY.rawValue) { success, value in
+            
+            print("Initalised : \(success)")
         }
         
         return true

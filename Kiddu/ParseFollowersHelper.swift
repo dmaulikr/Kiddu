@@ -15,23 +15,24 @@ class ParseFollowersHelper {
     
     //MARK: Updates user followers in background
     
-    func updateUserFollowersInBackground(currentUserObjectId : PFUser, following : [String])
+    func updateUserFollowersInBackground(currentUserObjectId : String, following : [String])
     {
-        let object : PFObject = PFObject(className: Followers.className.rawValue)
-        object[Followers.mainUser.rawValue] = currentUserObjectId
-        object[Followers.following.rawValue] = following
-        object.saveInBackground()
+        for followinThesePeople in following
+        {
+            let object : PFObject = PFObject(className: Followers.className.rawValue)
+            object[Followers.userObjectId.rawValue] = currentUserObjectId
+            object[Followers.followerUserObjectId.rawValue] = followinThesePeople
+            object.saveInBackground()
+        }
     }
-    
-    
     
     //MARK: Recommended Users
     
-    func getUpdatedQuestionsForTheUser(completion : (success : Bool, objects : [RecommendedTableViewDatSource]) -> ())
+    func getUpdatedQuestionsForTheUser(currentUserObjectId : String, completion : (success : Bool, objects : [RecommendedTableViewDatSource]) -> ())
     {
-        if let query : PFQuery = PFQuery(className: QUESTIONS.className.rawValue)
+        if let query : PFQuery = PFQuery(className: Followers.className.rawValue)
         {
-            query.whereKey(QUESTIONS.userObjectID.rawValue, containsAllObjectsInArray: [])
+            query.whereKey(Followers.userObjectId.rawValue, equalTo: currentUserObjectId)
             query.findObjectsInBackgroundWithBlock { objects, error in
                 
                 if error != nil
@@ -47,9 +48,7 @@ class ParseFollowersHelper {
                             completion(success: false, objects : [])
                         }
                         else
-                        {
-                            print(properObjects.count)
-                            
+                        {                            
                             self.getAllValuesFrom(properObjects, completion: { values in
                                 
                                 completion(success: true, objects : values)
@@ -82,6 +81,8 @@ class ParseFollowersHelper {
                 data.totalFollowers = followers
                 data.userObjectID = objectID
                 
+                print("objectID : \(objectID)")
+                
                 do {
                     let dataFromServer = try imageFromServer.getData()
                     
@@ -102,5 +103,4 @@ class ParseFollowersHelper {
             }
         }
     }
-
 }

@@ -49,6 +49,7 @@ enum ANSWERS : String
 {
     case className = "ANSWERS"
     case questionID = "questionID"
+    case answer_ObjectId = "answer_ObjectId"
 
     // Answered By
     
@@ -60,16 +61,6 @@ enum ANSWERS : String
     
     case upVote = "upVote" // Number
 }
-
-
-
-var user_Name : String = String()
-var answered_UserID : String = String()
-var question_ID : String = String()
-var question_asked_UserID : String = String()
-var totalUpVote : Int = Int()
-var answer : String = String()
-
 
 //MARK: KidduQuestions Class
 
@@ -88,10 +79,8 @@ enum RECFOLLOWERS : String
 enum Followers : String
 {
     case className = "Followers"
-    case mainUser = "mainUser" // Pointer to User
-    case userObjectID = "userObjectID"
-    case following = "iFollow"
-    case followers = "followsMe"
+    case userObjectId = "userObjectId"
+    case followerUserObjectId = "followerUserObjectId"
 }
 
 

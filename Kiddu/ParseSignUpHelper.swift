@@ -30,12 +30,6 @@ class ParseSignUpHelper {
         newUser[KIDDUUSER.totalQuestions.rawValue] = 0
         newUser[KIDDUUSER.userImage.rawValue] = PFFile(data: imageData)
         
-        // Settings values locally
-        
-        USER_UUID_ID = uuid
-        USER_NAME = name
-        USER_EMAIL = email
-        
         newUser.signUpInBackgroundWithBlock { completed, error in
             
             if completed
@@ -61,7 +55,6 @@ class ParseSignUpHelper {
         }
     }
 
-   
 }
 
 
